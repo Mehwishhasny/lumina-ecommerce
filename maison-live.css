@@ -1,0 +1,83 @@
+/* LUMINA Maison | Concierge & delivery calendar */
+.lumina-concierge,.lumina-calendar-layer{font-family:'Plus Jakarta Sans','DM Sans',sans-serif}
+.lumina-concierge{position:fixed;z-index:54;bottom:22px;right:24px;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none}
+.lumina-concierge > *{pointer-events:auto}
+.lumina-concierge-launcher{border:1px solid rgba(255,255,255,.28);border-radius:999px;background:#482d3a;color:#fff;box-shadow:0 15px 38px rgba(58,34,46,.28);padding:9px 15px 9px 9px;display:flex;align-items:center;gap:10px;min-height:59px;transition:transform .18s,box-shadow .18s}
+.lumina-concierge-launcher:hover{transform:translateY(-2px);box-shadow:0 22px 44px rgba(58,34,46,.31)}
+.lumina-launcher-mark{width:41px;height:41px;border-radius:50%;background:#eed8db;color:#482d3a;display:grid;place-items:center;font-size:24px}
+.lumina-launcher-label{text-align:left;line-height:1.28}
+.lumina-launcher-label strong,.lumina-launcher-label small{display:block}
+.lumina-launcher-label strong{font-size:12px;letter-spacing:-.01em}
+.lumina-launcher-label small{font-size:10px;color:#ead8de;margin-top:3px}
+.lumina-launcher-arrow{font-size:16px;color:#f5dde3;margin-left:2px}
+.lumina-concierge-panel{width:min(390px,calc(100vw - 28px));height:min(575px,calc(100dvh - 114px));max-height:575px;display:flex;flex-direction:column;overflow:hidden;background:#fffaf7;border:1px solid #e5d7d8;border-radius:21px;box-shadow:0 25px 75px rgba(40,22,34,.25);transform-origin:bottom right}
+.lumina-concierge-panel[hidden]{display:none!important}
+.lumina-concierge-head{background:#482d3a;color:#fff;min-height:83px;display:flex;align-items:center;gap:11px;padding:17px 17px}
+.lumina-assistant-avatar{display:grid;place-items:center;flex:0 0 42px;height:42px;background:#e9d2d9;color:#503442;border-radius:14px;font-size:25px}
+.lumina-assistant-title{flex:1;min-width:0}.lumina-assistant-title strong{font-size:14px;display:block;letter-spacing:.01em}.lumina-assistant-title small{font-size:10px;color:#ecdce1;display:block;margin-top:4px}
+.lumina-presence{display:inline-block;width:6px;height:6px;background:#a9d5b0;border-radius:50%;vertical-align:middle;margin-right:3px}
+.lumina-concierge-close{color:#fff;background:transparent;border:0;font-size:28px;line-height:1;padding:5px}
+.lumina-concierge-transcript{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:20px 16px 12px;display:flex;flex-direction:column;gap:13px;min-height:110px;scrollbar-width:thin}
+.lumina-msg{max-width:92%;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.lumina-msg.is-user{align-self:flex-end;align-items:flex-end;max-width:90%}
+.lumina-msg-label{font-size:9px;color:#947e88;letter-spacing:.12em;text-transform:uppercase;font-weight:800;margin-left:3px}
+.lumina-msg-bubble{border-radius:15px 15px 15px 4px;background:#f1e7e6;color:#4b3a43;line-height:1.62;font-size:12px;padding:13px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.lumina-msg.is-user .lumina-msg-bubble{background:#4a303d;color:#fff;border-radius:15px 15px 4px 15px}
+.lumina-msg-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:1px}
+.lumina-msg-tools button{background:#fff;border:1px solid #dcbfc7;border-radius:999px;color:#573b49;padding:8px 10px;font-size:10px;font-weight:700;cursor:pointer;min-height:31px}
+.lumina-msg-tools button:hover{background:#f2e4e7}
+.lumina-chat-products{width:100%;display:grid;gap:7px;margin-top:2px}
+.lumina-chat-product{padding:7px 9px 7px 7px;border-radius:10px;border:1px solid #e7d8d9;background:#fff;display:flex;align-items:center;text-align:left;gap:10px;min-height:60px;color:#463440}
+.lumina-chat-product img{width:45px;height:46px;object-fit:cover;border-radius:6px;background:#eadedc}
+.lumina-chat-product-info{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}.lumina-chat-product-info strong{font-size:11px}.lumina-chat-product-info small{font-size:10px;color:#866e7b}
+.lumina-chat-product .lumina-product-arrow{font-size:17px;color:#755666}
+.lumina-concierge-suggestions{padding:0 14px 11px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.lumina-concierge-suggestions button{white-space:nowrap;background:#fff;border:1px solid #eadadd;border-radius:999px;padding:8px 10px;color:#705364;font-size:10px;font-weight:750}
+.lumina-concierge-suggestions button:hover{background:#f3e7e8}
+.lumina-concierge-compose{margin:0 14px;display:flex;align-items:center;border:1px solid #e8dadd;background:#fff;padding:5px 5px 5px 13px;border-radius:12px;min-height:48px}
+.lumina-concierge-compose:focus-within{outline:2px solid #b994a1;outline-offset:1px}
+.lumina-concierge-compose input{border:none!important;outline:none!important;background:transparent;color:#4b3541;font-size:12px;min-width:0;flex:1;height:35px;padding:0 4px 0 0}
+.lumina-concierge-compose button{border:0;background:#503542;color:white;border-radius:9px;width:37px;height:36px;display:grid;place-items:center;flex:none}
+.lumina-concierge-compose svg{width:18px;height:18px}
+.lumina-assistant-footnote{color:#9a828e;font-size:9px;text-align:center;line-height:1.3;margin:7px 10px 12px}
+
+/* LUMINA Maison live assistant and seasonal promotion */
+.lumina-concierge-head .lumina-assistant-title small{color:#f4e0e4}
+.lumina-sale-layer{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:18px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif}
+.lumina-sale-layer[hidden]{display:none!important}
+.lumina-sale-backdrop{position:absolute;inset:0;background:rgba(29,18,25,.66);backdrop-filter:blur(9px)}
+.lumina-sale-dialog{position:relative;display:grid;grid-template-columns:0.9fr 1.1fr;width:min(860px,100%);max-height:min(690px,94dvh);overflow:auto;background:#fffaf7;border:1px solid #f6e1e3;border-radius:22px;box-shadow:0 28px 100px #1b0d1959;outline:none;animation:salePopIn .42s cubic-bezier(.16,.8,.2,1) both}
+.lumina-sale-image{position:relative;min-height:410px;background:#e9d6d9;overflow:hidden}
+.lumina-sale-image img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.88)}
+.lumina-sale-image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#3a1f2b50,transparent 40%);pointer-events:none}
+.lumina-sale-image-tag{position:absolute;z-index:1;left:24px;bottom:25px;font-size:11px;font-weight:800;letter-spacing:.22em;color:white}
+.lumina-sale-copy{display:flex;flex-direction:column;justify-content:center;gap:19px;padding:46px 44px 34px}
+.lumina-sale-kicker{color:#88636f;font-size:10px;font-weight:800;letter-spacing:.17em}
+.lumina-sale-copy h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(48px,5vw,68px);font-weight:500;line-height:.96;letter-spacing:-.04em;color:#482d3a;margin:0}
+.lumina-sale-copy h2 em{color:#946b79;font-weight:500}
+.lumina-sale-copy p{margin:0;font-size:13px;line-height:1.7;color:#70535d}
+.lumina-sale-codebox{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px dashed #c59caa;background:#f9edf0;padding:15px;border-radius:12px}
+.lumina-sale-codebox small{display:block;color:#8e7880;font-size:9px;font-weight:800;letter-spacing:.1em;margin-bottom:4px}
+.lumina-sale-codebox strong{font-size:21px;color:#512e3c;letter-spacing:.12em}
+.lumina-sale-codebox button{background:#fff;border:1px solid #d9bcc5;border-radius:8px;color:#553d47;cursor:pointer;font-size:11px;font-weight:800;padding:11px 12px;white-space:nowrap}
+.lumina-sale-codebox button:hover{background:#fff7fb}
+.lumina-sale-cta{width:100%;justify-content:center;min-height:47px}
+.lumina-sale-copy .lumina-sale-disclaimer{font-size:10px;color:#937984;line-height:1.5}
+.lumina-sale-close{position:absolute;z-index:5;right:15px;top:13px;display:grid;place-items:center;width:35px;height:35px;border:1px solid #e4cbcd;border-radius:50%;color:#523944;background:#fffdfae8;font-size:26px;line-height:1;cursor:pointer}
+.sale-top-trigger{border:0;background:transparent;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.sale-top-trigger:hover{opacity:.8}
+.lumina-concierge-compose button:disabled{opacity:.5;cursor:progress}
+.lumina-msg-status{padding:4px 7px;font-size:10px;color:#896d79}
+@keyframes salePopIn{from{opacity:0;transform:translateY(35px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:650px){
+ .lumina-sale-dialog{grid-template-columns:1fr;max-height:91dvh;width:min(420px,100%)}
+ .lumina-sale-image{height:175px;min-height:175px}
+ .lumina-sale-image img{object-position:center 44%}
+ .lumina-sale-copy{gap:13px;padding:24px 25px 25px}
+ .lumina-sale-copy h2{font-size:52px}
+ .lumina-sale-copy p{font-size:12px}
+ .lumina-concierge{bottom:10px;right:10px}
+ .lumina-concierge-panel{height:min(590px,calc(100dvh - 82px))}
+}
+@media(prefers-reduced-motion:reduce){.lumina-sale-dialog{animation:none}}
+@media print{.lumina-sale-layer,.lumina-concierge{display:none!important}}

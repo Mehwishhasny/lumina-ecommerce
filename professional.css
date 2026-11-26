@@ -1,0 +1,137 @@
+/* LUMINA professional editorial edition. Last stylesheet deliberately overrides old styles. */
+:root { --ink:#2b2527; --muted:#766f73; --paper:#fffefa; --cream:#f7f3ef; --lavender:#e7e1e6; --plum:#65515d; --line:#e9e4e0; --radius:12px; }
+html {scroll-behavior:smooth;}
+body {background:#fffefa;color:var(--ink);font-family:'DM Sans',sans-serif;}
+.container {width:min(1230px,calc(100% - 72px));}
+.top-note {padding:10px 12px;background:#42333e;color:#f8f2f0;letter-spacing:.075em;font-size:10px;text-transform:uppercase;font-weight:600;}
+.notice-separator {padding:0 13px;opacity:.55;}
+.site-header {background:#fffcf9ee;border-bottom:1px solid #eae4e1;}
+.site-header .header-inner {height:78px;}
+.brand {font-size:24px;letter-spacing:-.085em;}
+.brand-mark {animation:none!important;color:#9f889c;}
+.main-nav a,.main-nav button {font-size:12px;font-weight:600;color:#554e54;letter-spacing:.015em;}
+.hero-3d {grid-template-columns:49% 51%;min-height:565px;margin-top:24px;box-shadow:none;border-radius:8px;background:#f6f0ec;}
+.hero-3d .hero-copy {background:#f6f1ef;padding:92px 56px 65px 73px;justify-content:center;}
+.hero-3d .hero-copy::before {display:none;}
+.hero-3d .eyebrow {font-size:10px;letter-spacing:.19em;color:#866b7b;}
+.hero-3d h1 {font-family:'Manrope',sans-serif;font-size:clamp(54px,5.2vw,76px);line-height:1.045;letter-spacing:-.075em;margin:25px 0 21px;font-weight:700;}
+.hero-3d h1 em {color:#947382;font-weight:400;font-family:Georgia,serif;}
+.hero-3d .hero-copy>p {max-width:320px;font-size:15px;line-height:1.65;color:#746a70;}
+.hero-3d .hero-actions {gap:26px;margin-top:33px;}
+.btn {box-shadow:none;border-radius:5px;}
+.btn-dark {background:#362c34;}
+.btn-hero {padding:16px 23px;box-shadow:none;font-weight:650;}
+.hero-visual.immersive-stage.photo-stage {min-height:565px;height:565px;background:radial-gradient(ellipse at 48% 43%,#f7eeee 0,#e7d8db 47%,#cbb8c0 100%);border-radius:0 8px 8px 0;}
+.photo-stage-glow {background:radial-gradient(circle at 50% 43%,#fff9,transparent 65%);}
+.photo-stage-ring {display:none;}
+.photo-stage-world {transform:perspective(1200px) rotateX(var(--scene-x,0deg)) rotateY(var(--scene-y,0deg));}
+.perfume-entrance {width:min(73%,390px);top:0%;filter:drop-shadow(12px 22px 17px #45363e44);}
+.stage-editorial-label {position:absolute;z-index:4;top:31px;left:31px;display:flex;flex-direction:column;gap:4px;color:#544450;}
+.stage-editorial-label span {font-size:10px;letter-spacing:.16em;font-weight:700;}
+.stage-editorial-label strong {font-family:Georgia,serif;font-style:italic;font-size:22px;font-weight:400;}
+.stage-replay-button,.stage-motion-toggle {left:auto;bottom:22px;top:auto;right:22px;background:#fffef0dd;color:#443941;border:1px solid #ffffffde;border-radius:5px;padding:9px 12px;box-shadow:0 6px 20px #8e7d8820;font-size:11px;}
+.stage-motion-toggle {right:105px;}
+.stage-motion-toggle span {margin-right:5px;}
+.collections {padding-top:92px;padding-bottom:92px;}
+.section-heading h2,.story h2 {font-family:'Manrope',sans-serif;font-size:clamp(35px,3.3vw,49px);font-weight:650;letter-spacing:-.063em;}
+.collections .section-heading {margin-bottom:26px;}
+.eyebrow.small {letter-spacing:.16em;font-size:10px;color:#89717e;}
+.collection-grid {gap:19px;}
+.collection-card {height:360px;border-radius:6px;box-shadow:none!important;transform:none!important;}
+.collection-photo {filter:saturate(.85) brightness(.93);}
+.collection-label {background:#fffdfaf0;box-shadow:none;border-radius:3px;left:18px;right:18px;bottom:18px;min-height:83px;}
+.collection-label>span:first-child {font-size:9px;letter-spacing:.16em;color:#89727b;}
+.collection-label strong {font-size:21px;letter-spacing:-.04em;}
+.collection-card:hover .collection-photo {transform:scale(1.05);}
+/* More photo, less copy in the product grid. */
+.shop-section {padding:85px 0 100px;background:#f9f7f5;}
+.shop-top {margin-bottom:27px;}
+.shop-top h2 {margin:4px 0 0;}
+.product-grid {gap:34px 19px;grid-template-columns:repeat(4,minmax(0,1fr));}
+.product-card {transform:none!important;will-change:auto;}
+.product-card:hover {--lift:0;}
+.product-media {height:310px;border-radius:5px;background:#eee8e4;box-shadow:none;transform:none;}
+.product-card .product-preview img {object-fit:cover;}
+.product-category {font-size:10px;letter-spacing:.08em;margin-top:13px;}
+.product-name {font-size:15px;letter-spacing:-.03em;font-weight:700;}
+.product-description {display:none;}
+.product-price {margin-top:8px;font-size:13px;font-weight:700;}
+.product-tag {border-radius:2px;padding:7px 10px;}
+.favorite-heart,.quick-add {border-radius:50%;}
+/* Second photo, second interactive cap animation. Triggered on hover, focus or button. */
+.hover-feature {margin-top:0;margin-bottom:112px;min-height:490px;background:#eee7e1;display:grid;grid-template-columns:45% 55%;border-radius:6px;overflow:hidden;}
+.hover-feature-copy {padding:71px 35px 60px 67px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;}
+.hover-feature-copy h2 {max-width:390px;font:650 clamp(36px,3.8vw,54px)/1.12 'Manrope',sans-serif;letter-spacing:-.07em;margin:18px 0 20px;}
+.hover-feature-copy h2 em {font:italic 400 1.04em Georgia,serif;letter-spacing:-.06em;color:#967484;}
+.hover-feature-copy p {color:#706771;line-height:1.65;font-size:14px;max-width:275px;margin:0 0 24px;}
+.hover-feature-copy .text-link {font-size:12px;}
+.hover-feature-actions {display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:54px;}
+.hover-tip {font-size:11px;color:#887883;max-width:180px;line-height:1.5;}
+.hover-play-btn {border:1px solid #9f8c93;padding:10px 15px;background:transparent;border-radius:5px;font:700 11px 'DM Sans',sans-serif;color:#493943;cursor:pointer;}
+.hover-play-btn:hover,.hover-play-btn:focus-visible {background:#fff6;}
+.hover-feature-visual {position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 52% 40%,#f7f4ed 0%,#e1dccf 55%,#c1b8ab 100%);outline-offset:-4px;cursor:pointer;min-height:490px;}
+.hover-feature-halo {position:absolute;inset:10% 22%;border:1px solid #fff9;border-radius:50%;pointer-events:none;}
+.hover-feature-photo-tag,.hover-photo-caption {position:absolute;z-index:5;font-size:10px;letter-spacing:.14em;color:#594d4d;font-weight:700;}
+.hover-feature-photo-tag {top:31px;left:33px;}
+.hover-photo-caption {right:31px;bottom:25px;font-weight:500;letter-spacing:.05em;}
+.hover-perfume {position:absolute;z-index:3;inset:0;margin:0;transform-origin:center center;filter:drop-shadow(12px 20px 18px #75664b44);}
+.hover-perfume img {display:block;width:min(86%,470px);height:auto;aspect-ratio:1;object-fit:contain;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;user-select:none;}
+/* The square source image is centered; bottle from 35%-65% and cap from 44%-56%. */
+.hover-perfume-body {clip-path:polygon(35% 40%,64% 40%,64% 76%,35% 76%);}
+.hover-perfume-cap {clip-path:polygon(43% 24%,56% 24%,57% 43%,43% 43%);transform-origin:50% 31%;}
+@keyframes hoverBottleArrival {0%{opacity:.5;translate:-70px 15px;rotate:-8deg}25%{opacity:1;translate:0 0;rotate:0deg}100%{opacity:1;translate:0 0;rotate:0deg}}
+@keyframes hoverBottleCap {0%,30%{translate:0 0;rotate:0deg}47%,64%{translate:10px -42px;rotate:8deg}85%,100%{translate:0 0;rotate:0deg}}
+.hover-feature-visual.is-playing .hover-perfume {animation:hoverBottleArrival 3.6s cubic-bezier(.26,.7,.24,1) both;}
+.hover-feature-visual.is-playing .hover-perfume-cap {animation:hoverBottleCap 3.6s cubic-bezier(.25,.75,.3,1) both;}
+/* About and customer-care are useful but visually restrained. */
+.story {background:#f2eeea;border-radius:6px;margin-top:88px;margin-bottom:90px;}
+.story-art.story-photo {min-height:370px;}
+.story-text {padding:55px;}
+.story-text p {line-height:1.75;max-width:360px;}
+.faq-section {margin-bottom:88px;}
+.faq-grid {gap:15px;}
+.footer {background:#342c31;}
+.footer-bottom {font-size:11px;}
+.reveal {transition-duration:.45s;}
+body.motion-paused .hover-feature-visual.is-playing .hover-perfume,
+body.motion-paused .hover-feature-visual.is-playing .hover-perfume-cap {animation:none!important;}
+@media(max-width:1100px){.product-grid {grid-template-columns:repeat(3,minmax(0,1fr));}.hover-feature-copy{padding-left:44px}.hero-3d .hero-copy{padding-left:43px}.hero-3d h1{font-size:clamp(53px,5.2vw,69px)}}
+@media(max-width:760px){
+ .container {width:min(calc(100% - 28px),1230px);}
+ .top-note {font-size:8px;line-height:1.5;padding:8px 10px;}
+ .site-header .header-inner {height:65px;}
+ .hero-3d {grid-template-columns:1fr;margin-top:13px;min-height:0;}
+ .hero-3d .hero-copy {min-height:310px;padding:45px 28px 43px;}
+ .hero-3d h1{font-size:clamp(48px,11vw,62px);max-width:500px;margin:18px 0;}
+ .hero-3d .hero-copy>p {font-size:14px;}
+ .hero-visual.immersive-stage.photo-stage {height:385px;min-height:385px;border-radius:0 0 6px 6px;}
+ .perfume-entrance {width:min(80%,340px);top:-3%;}
+ .stage-editorial-label{left:20px;top:20px;}.stage-editorial-label strong{font-size:19px}
+ .stage-replay-button,.stage-motion-toggle{bottom:16px;right:14px;}.stage-motion-toggle{right:94px;}
+ .collections {padding-top:65px;padding-bottom:65px;}
+ .collection-grid {gap:12px;}
+ .collection-card {height:255px;}
+ .collection-label{min-height:65px;padding:12px;left:10px;right:10px;bottom:10px;}
+ .collection-label strong {font-size:17px;}
+ .product-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px;}
+ .product-media {height:255px;}
+ .hover-feature {grid-template-columns:1fr;margin-bottom:67px;}
+ .hover-feature-copy{padding:40px 28px 30px;}
+ .hover-feature-copy h2{font-size:43px;max-width:430px;}
+ .hover-feature-actions{margin-top:30px;}
+ .hover-feature-visual{min-height:410px;}
+ .story{margin-top:65px;margin-bottom:60px;}.story-text{padding:38px 28px;}
+ .faq-section{margin-bottom:66px;}
+}
+@media(max-width:420px){
+ .hero-3d .hero-copy{min-height:0;}.hero-3d h1{font-size:47px;}
+ .hero-visual.immersive-stage.photo-stage{height:355px;min-height:355px;}
+ .collections .section-heading h2,.shop-top h2{font-size:34px;}
+ .collection-card{height:205px;}
+ .collection-label strong{font-size:15px;}
+ .product-media{height:205px;}
+ .hover-feature-copy h2{font-size:38px;}
+ .hover-feature-visual{min-height:360px;}
+ .hover-tip{max-width:170px;}
+}
+@media(prefers-reduced-motion:reduce){.hover-feature-visual .hover-perfume,.hover-feature-visual .hover-perfume-cap {animation:none!important;}.hover-feature-visual .hover-perfume{opacity:1;transform:none;}}

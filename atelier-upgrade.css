@@ -1,0 +1,43 @@
+/* LUMINA Atelier finishing upgrade — responsive editorial polish + functional browsing. */
+:root {--atelier-ink:#392e32;--atelier-rose:#ad8790;--atelier-line:#e8e0db;}
+.atelier-service{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:27px;margin-bottom:0;border-top:1px solid #ebe3de;border-bottom:1px solid #ebe3de;background:#fffdfa;}
+.atelier-service>div{display:flex;align-items:center;justify-content:center;gap:14px;padding:23px 10px;min-width:0;}
+.atelier-service>div+div{border-left:1px solid #ebe3de;}
+.atelier-service-icon{width:32px;text-align:center;font-size:25px;font-weight:300;line-height:1;color:#ad8d8b;}
+.atelier-service b,.atelier-service small{display:block;}
+.atelier-service b{font-size:12px;letter-spacing:.015em;font-weight:700;color:#45393b;}
+.atelier-service small{font-size:11px;color:#8a7b7b;margin-top:4px;}
+.atelier-filter-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #e9e1dc;margin:17px 0 24px;padding-top:18px;flex-wrap:wrap;}
+.atelier-filter-controls{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.atelier-filter-controls label{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:#65595b;}
+.atelier-filter-controls select{border:1px solid #e2d7d2;border-radius:5px;background:#fffdfa;padding:9px 28px 9px 10px;color:#44363d;min-height:37px;font-size:12px;cursor:pointer;}
+.atelier-stock-filter{cursor:pointer;white-space:nowrap;}
+.atelier-stock-filter input{accent-color:#8f6878;width:15px;height:15px;}
+.atelier-result-count{font-size:11px;color:#8c7d81;letter-spacing:.025em;}
+.atelier-recent{padding-top:72px;padding-bottom:90px;}
+.atelier-recent[hidden]{display:none!important;}
+.atelier-recent .editorial-heading{margin-bottom:23px;}
+.atelier-recent .editorial-heading h2{margin-bottom:0;}
+.atelier-text-button{border:0;background:none;color:#846875;text-decoration:underline;text-underline-offset:4px;padding:8px 2px;cursor:pointer;font-size:12px;}
+.atelier-text-button:hover{color:#3d2d33;}
+.atelier-recent-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+.atelier-recent-card{min-width:0;}
+.atelier-recent-photo{position:relative;height:258px;width:100%;padding:0;border:0;border-radius:7px;overflow:hidden;background:#f2ebe7;display:block;cursor:pointer;}
+.atelier-recent-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .55s ease;}
+.atelier-recent-photo:hover img{transform:scale(1.06);}
+.atelier-recent-meta{font-size:10px;color:#87777b;margin-top:12px;letter-spacing:.04em;}
+.atelier-recent-name{display:block;background:transparent;border:0;color:#41343a;font-weight:700;font-size:13px;padding:6px 0;text-align:left;cursor:pointer;}
+.atelier-recent-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.atelier-recent-price{font-size:12px;font-weight:700;color:#60484f;}
+.atelier-recent-add{font-size:11px;cursor:pointer;padding:7px 9px;background:#fffdfa;border-radius:4px;border:1px solid #dcd0cc;color:#654c57;}
+.atelier-recent-add:hover{background:#f4e8e9;}
+.atelier-shipping-meter{display:grid;gap:7px;margin:11px 0 14px;}
+.atelier-meter-track{height:5px;background:#efe7e3;border-radius:20px;overflow:hidden;}
+.atelier-meter-track span{display:block;height:100%;width:0%;background:#a77c88;border-radius:20px;transition:width .35s ease;}
+.atelier-shipping-meter small{font-size:11px;color:#6c6062;line-height:1.4;}
+.product-card:focus-within,.featured-card:focus-within,.atelier-recent-card:focus-within{outline:1px solid #c4a0ae;outline-offset:4px;}
+.atelier-filter-controls :focus-visible,.atelier-text-button:focus-visible,.atelier-recent-card button:focus-visible{outline:2px solid #946978;outline-offset:2px;}
+@media(max-width:900px){.atelier-recent-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.atelier-recent-photo{height:300px;}}
+@media(max-width:760px){.atelier-service{grid-template-columns:1fr 1fr;}.atelier-service>div{justify-content:flex-start;padding:18px 12px;}.atelier-service>div:nth-child(3){grid-column:1/-1;justify-content:center;border-left:0;border-top:1px solid #ebe3de;}.atelier-service-icon{font-size:21px;}.atelier-service b{font-size:11px;}.atelier-service small{font-size:10px;}.atelier-recent{padding:60px 0 65px;}.atelier-recent-photo{height:260px;}.atelier-filter-bar{align-items:flex-start;}.atelier-filter-controls{gap:12px;}}
+@media(max-width:440px){.atelier-recent-grid{gap:13px;}.atelier-recent-photo{height:210px;}.atelier-recent-bottom{flex-wrap:wrap;}.atelier-filter-controls{gap:11px;}.atelier-result-count{width:100%;}.atelier-service>div{gap:9px;}}
+@media(prefers-reduced-motion:reduce){.atelier-recent-photo img,.atelier-meter-track span{transition:none;}}

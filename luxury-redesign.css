@@ -1,0 +1,154 @@
+/* LUMINA 2026 — premium editorial storefront. Supplements the established checkout UI. */
+:root{--lux-ink:#2f2a2b;--lux-muted:#817975;--lux-accent:#8f6e75;--lux-line:#e7dfda;--lux-paper:#f9f6f2;}
+html{scroll-padding-top:95px}body{font-family:'DM Sans',sans-serif;color:var(--lux-ink);background:#fffdfa;}
+button,input,select,textarea{font-family:'DM Sans',sans-serif}
+.top-note{background:#292326;color:#fdf7ef;font-weight:500;letter-spacing:.065em}
+.site-header{background:#fffdfaee;border-bottom:1px solid #e9e1dc;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.site-header .header-inner{height:84px}
+.brand{font-size:26px;letter-spacing:-.065em;font-family:'DM Sans',sans-serif;font-weight:700}
+.brand-mark{color:#9a7885}.brand-dot{color:#af8290}
+.main-nav{gap:32px}
+.main-nav a,.main-nav button{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.012em}
+.main-nav a:hover,.main-nav button:hover{color:#996f80}
+.hero-3d{margin-top:20px;min-height:590px;background:#f7f2ee;border-radius:12px}
+.hero-3d .hero-copy{padding:85px 60px 60px 75px;background:#f6f0eb}
+.hero-3d h1{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(57px,5.5vw,86px);letter-spacing:-.04em;line-height:1.07;max-width:540px;margin:21px 0 23px}
+.hero-3d h1 em{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-style:italic;color:#a27784;letter-spacing:-.042em}
+.hero-3d .eyebrow{font-size:10px;letter-spacing:.21em;color:#906e76}
+.hero-3d .hero-copy>p{font-size:15px;line-height:1.8;max-width:360px;color:#706763}
+.hero-3d .hero-actions{margin-top:34px;gap:29px;flex-wrap:wrap}
+.btn-dark{background:#382d30;color:#fff}
+.btn-dark:hover{background:#664b55}
+.btn,.stage-replay-button,.stage-motion-toggle{border-radius:5px}
+.btn-hero{padding:17px 24px;box-shadow:0 12px 22px #3e293013}
+.hero-visual.immersive-stage.photo-stage{min-height:590px;height:590px;border-radius:0 12px 12px 0}
+#featuredShowcase .stage-editorial-label strong{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:27px;color:#44323e}
+#featuredShowcase .showcase-navigator{border-radius:9px}
+#featuredShowcase .hero-photo-frame{border-radius:8px;box-shadow:0 30px 48px #48352c35;}
+#featuredShowcase .hero-slide-beauty{background:radial-gradient(ellipse at 50% 42%,#fff0e9 0,#f0d6d4 54%,#d9b9bd 100%)}
+#featuredShowcase .hero-slide-kitchen{background:radial-gradient(ellipse at 50% 42%,#faf2e0 0,#eaddbf 55%,#baa587 100%)}
+#featuredShowcase .hero-slide-accessories{background:radial-gradient(ellipse at 50% 42%,#f8efe6 0,#e6d3c3 54%,#c7ac99 100%)}
+#featuredShowcase .hero-slide-beauty .beauty-entrance{width:min(59%,335px);top:11%;height:68%;border-radius:10px}
+#featuredShowcase .hero-slide-kitchen .kitchen-entrance{width:min(60%,335px);top:11%;height:68%;border-radius:10px}
+#featuredShowcase .hero-slide-accessories .bag-entrance{width:min(60%,335px);top:11%;height:68%;border-radius:10px}
+/* Separate physical stories: serum light, steaming cup, swinging tote. */
+#featuredShowcase .hero-slide-beauty .showcase-aura{background:#fff8;filter:blur(42px)}
+#featuredShowcase .hero-slide-beauty .beauty-light-sweep{background:linear-gradient(110deg,transparent 24%,#ffffffb2 48%,transparent 71%)}
+#featuredShowcase .hero-slide-kitchen .coffee-steam{top:11%;left:47%;z-index:4;}
+#featuredShowcase .hero-slide-kitchen .coffee-steam i{border-left-color:#fff9;filter:blur(2px)}
+#featuredShowcase .hero-slide-accessories .bag-entrance{transform-origin:50% 4%}
+.eyebrow.small{font-size:10px;letter-spacing:.20em;font-weight:700;color:#9a7b80}
+.section-heading h2,.story h2,.hover-feature-copy h2,.editorial-heading h2,.faq-section h2{
+  font-family:'DM Serif Display',Georgia,serif;font-weight:400;letter-spacing:-.03em;
+  font-size:clamp(39px,3.7vw,57px);line-height:1.1
+}
+.editorial-heading h2 em,.story h2 em,.hover-feature-copy h2 em{font-family:'DM Serif Display',Georgia,serif;font-style:italic;color:#a17a85;font-weight:400}
+.section-heading .text-link,.editorial-arrow{font-size:12px;font-weight:700;color:#6b4e56}
+/* Featured picks built from active Supabase products, keeping existing cart handlers. */
+.featured-section{padding-top:97px;padding-bottom:95px}
+.editorial-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px}
+.editorial-heading h2{margin:8px 0 11px}
+.editorial-heading p{font-size:14px;line-height:1.65;color:var(--lux-muted);margin:0;max-width:430px}
+.editorial-arrow{white-space:nowrap;margin-bottom:13px;display:inline-flex;align-items:center;gap:10px}
+.editorial-arrow span{font-size:18px}
+.featured-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.featured-card{min-width:0;transition:transform .28s ease;}
+.featured-card:hover{transform:translateY(-4px)}
+.featured-photo{height:340px;position:relative;overflow:hidden;background:#f1eae4;border-radius:7px}
+.featured-image-button{display:block;position:absolute;inset:0;width:100%;height:100%;background:none;border:0;padding:0;overflow:hidden}
+.featured-image-button img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.featured-card:hover .featured-image-button img{transform:scale(1.065)}
+.featured-index{position:absolute;z-index:1;top:13px;left:14px;background:#fffdf9dc;color:#65525a;padding:8px 9px;border-radius:3px;font-size:9px;letter-spacing:.15em;font-weight:800;pointer-events:none}
+.featured-cart-action{position:absolute;bottom:13px;left:13px;right:13px;border:0;border-radius:4px;z-index:1;padding:13px 12px;color:#49363e;background:#fffdf5e8;font-weight:700;font-size:11px;box-shadow:0 8px 25px #45313715;transition:transform .3s,background .25s;transform:translateY(160%)}
+.featured-card:hover .featured-cart-action,.featured-cart-action:focus-visible{transform:translateY(0)}
+.featured-cart-action:hover{background:#fff}
+.featured-meta{display:flex;justify-content:space-between;gap:10px;margin:18px 0 5px;font-size:11px;color:#8d8180;font-weight:600}
+.featured-title{display:block;background:none;border:0;padding:0;text-align:left;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;line-height:1.45;color:#382b31;}
+.featured-title:hover{color:#99707e}
+/* Collection category cards and hover reveal */
+.collections{padding-top:40px;padding-bottom:88px}
+.collection-card{border-radius:7px}
+.collection-label{background:#fffdfaeb;border-radius:4px}
+.hover-feature{border-radius:9px;background:#f0eae5}
+.hover-feature-copy h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.09;letter-spacing:-.032em}
+.hover-feature-copy h2 em{font-family:'DM Serif Display',Georgia,serif}
+/* Catalog */
+.shop-section{background:#f9f7f4;padding:90px 0 96px}
+.product-media{height:302px;border-radius:6px;background:#eee7e1}
+.product-card .product-preview img{transition:transform .65s cubic-bezier(.24,.75,.3,1)}
+.product-card:hover .product-preview img{transform:scale(1.065)}
+.product-name{font-size:14px}
+.category-pills .pill{border-radius:4px}
+/* Reviews: actual rows when available, intentionally labeled example cards otherwise. */
+.reviews-section{background:#f4eee9;padding:97px 0 105px;margin:0}
+.reviews-heading{margin-bottom:12px}
+.review-cta{align-self:end;margin-bottom:10px}
+.reviews-disclosure{font-size:11px;color:#847a76;line-height:1.5;margin:14px 0 24px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.review-card{background:#fffdfa;border:1px solid #ece4de;border-radius:7px;padding:28px 28px 25px;display:flex;flex-direction:column;min-height:257px;box-shadow:0 14px 25px #45322b07}
+.review-stars{letter-spacing:3px;color:#a17b64;font-size:15px;white-space:nowrap}
+.review-stars span{color:#d7cec4}
+.review-card blockquote{padding:0;margin:25px 0 28px;font:400 19px/1.38 'DM Serif Display',Georgia,serif;color:#40373b;letter-spacing:-.008em;flex:1}
+.review-card-foot{display:flex;justify-content:space-between;align-items:end;gap:12px;padding-top:18px;border-top:1px solid #eee7e3}
+.review-card-foot strong{display:block;font-size:12px;font-weight:700;color:#473d42}
+.review-card-foot small{display:block;margin-top:5px;color:#978b85;font-size:11px}
+.review-card-foot>span{font-size:9px;letter-spacing:.12em;color:#a0928b;text-align:right;white-space:nowrap}
+.review-skeleton{padding:30px;color:#847a76}
+.review-dialog{max-width:550px}
+.review-form-message{color:#a34c50;font-size:12px;min-height:16px;line-height:1.5}
+.review-form-message.is-success{color:#447653}
+.admin-review-list{display:grid;gap:12px;margin-top:16px}
+.admin-review-row{border:1px solid #e5dfe0;background:#fff;border-radius:8px;padding:18px}
+.admin-review-row strong{display:block;font-size:13px;margin:10px 0}
+.admin-review-row p{line-height:1.65;color:#675d62}
+.admin-review-row small{display:block;color:#82787d;font-size:11px;margin-bottom:12px}
+.story{border-radius:8px}
+.story h2{font-family:'DM Serif Display',Georgia,serif}
+.faq-section{padding-top:82px;padding-bottom:85px;margin-bottom:0}
+.footer{background:#30282c}
+.footer .brand{color:#fff}
+@media(min-width:761px){.main-nav a,.main-nav button{white-space:nowrap}}
+@media(max-width:1120px){.featured-photo{height:290px}.hero-3d .hero-copy{padding-left:45px;padding-right:35px}.hero-3d h1{font-size:clamp(56px,5.6vw,74px)}.main-nav{gap:20px}}
+@media(max-width:860px){.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.featured-photo{height:360px}.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reviews-grid>*:last-child:nth-child(odd){grid-column:1/-1}.main-nav{gap:16px}}
+@media(max-width:760px){
+ .site-header .header-inner{height:66px}.brand{font-size:23px}
+ .hero-3d{margin-top:12px;min-height:0;border-radius:8px;}
+ .hero-3d .hero-copy{padding:43px 30px 31px;min-height:280px}
+ .hero-3d h1{font-size:clamp(49px,11vw,66px);max-width:570px;line-height:1.07}
+ .hero-3d .hero-copy>p{font-size:14px}
+ .hero-3d .hero-actions{gap:20px;margin-top:23px}
+ .hero-visual.immersive-stage.photo-stage{height:420px;min-height:420px;border-radius:0 0 8px 8px}
+ #featuredShowcase .hero-photo-frame{width:min(62%,290px)!important;height:67%!important;top:10%}
+ .featured-section{padding-top:66px;padding-bottom:64px}
+ .featured-photo{height:310px}
+ .collections{padding-top:20px;padding-bottom:67px}
+ .editorial-heading{align-items:start;gap:18px}
+ .editorial-heading h2{font-size:clamp(37px,8.3vw,49px)}
+ .reviews-section{padding:65px 0 75px}
+ .review-card{padding:22px;min-height:230px}
+ .faq-section{padding-top:65px;padding-bottom:65px}
+ .hover-feature-copy h2{font-size:clamp(38px,9vw,54px)}
+}
+@media(max-width:520px){
+ .hero-3d .hero-copy{padding:34px 23px 25px}
+ .hero-3d h1{font-size:50px}
+ .hero-visual.immersive-stage.photo-stage{height:375px!important;min-height:375px!important}
+ .featured-grid{gap:12px}
+ .featured-photo{height:240px}
+ .featured-meta{font-size:10px;margin-top:12px;flex-wrap:wrap}
+ .featured-title{font-size:13px}
+ .featured-cart-action{transform:none;bottom:9px;left:9px;right:9px;padding:10px 6px;font-size:10px}
+ .featured-index{font-size:8px;padding:6px}
+ .editorial-heading{flex-direction:column;gap:10px;margin-bottom:20px}
+ .editorial-arrow{margin:0}
+ .reviews-grid{grid-template-columns:1fr}
+ .reviews-grid>*:last-child:nth-child(odd){grid-column:auto}
+ .review-card{min-height:0}
+ .reviews-heading .review-cta{align-self:flex-start}
+ .review-card blockquote{margin:18px 0 22px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ #featuredShowcase .hero-slide-beauty .beauty-entrance,#featuredShowcase .hero-slide-kitchen .kitchen-entrance,#featuredShowcase .hero-slide-accessories .bag-entrance{opacity:1!important;transform:translate3d(-50%,0,0)!important;animation:none!important}
+ #featuredShowcase .coffee-steam{display:none}
+}

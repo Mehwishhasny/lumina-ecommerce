@@ -1,0 +1,83 @@
+/* LUMINA — photographic product motion edition.
+   All product images are real photographs via product.image_url, never SVG substitutions.
+   Visual effects move/tilt 2D photographic layers; they do not reconstruct 3D objects. */
+:root{--photo-plum:#705575;--photo-blush:#f7eeee}
+.hero-visual.immersive-stage.photo-stage{
+  position:relative;isolation:isolate;
+  background:linear-gradient(135deg,#e9dde5 0%,#dfcbd9 42%,#c8b5c8 100%);
+}
+.photo-stage-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 53% 50%,#fffaf4bb,transparent 53%);filter:blur(4px);}
+.photo-stage-ring{position:absolute;border:1px solid #fff8;pointer-events:none;border-radius:50%;transform:rotate(-30deg);}
+.photo-stage-ring-one{width:75%;height:76%;left:15%;top:9%;box-shadow:0 0 70px #fff4;}
+.photo-stage-ring-two{width:98%;height:65%;top:16%;left:0;transform:rotate(25deg);border-color:#fff6;}
+.photo-stage-world{position:absolute;inset:0;transform-style:preserve-3d;transform:perspective(1000px) rotateX(var(--scene-x,0deg)) rotateY(var(--scene-y,0deg));transition:transform .3s ease-out;}
+.rolling-photo{
+  position:absolute;z-index:2;margin:0;width:58%;height:67%;left:21%;top:15%;
+  transform-origin:50% 80%;animation:realBottleRoll 5.6s cubic-bezier(.48,.05,.52,.95) infinite alternate;
+  will-change:transform;filter:drop-shadow(12px 25px 26px #71556a3d);
+}
+.rolling-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;
+  border-radius:42% 42% 36% 36% / 29% 29% 28% 28%;
+  -webkit-mask-image:radial-gradient(ellipse 72% 76% at 50% 49%,#000 57%,#000d 69%,transparent 91%);
+  mask-image:radial-gradient(ellipse 72% 76% at 50% 49%,#000 57%,#000d 69%,transparent 91%);
+  mix-blend-mode:multiply;
+}
+.photo-stage-shadow{position:absolute;z-index:1;left:27%;bottom:15%;width:45%;height:7%;border-radius:50%;background:#49334852;filter:blur(17px);animation:shadowPulse 5.6s ease-in-out infinite alternate;}
+.floating-photo{position:absolute;z-index:3;margin:0;right:5%;bottom:16%;width:30%;height:30%;padding:8px;
+  background:#fffc;box-shadow:0 26px 48px #4c354c3e;border-radius:13px;transform:rotate(12deg);animation:floatPhoto 6s ease-in-out infinite alternate;}
+.floating-photo img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;}
+.photo-stage-stamp{position:absolute;left:7%;bottom:19%;z-index:4;color:#fff;font-size:12px;letter-spacing:.15em;line-height:1.5;font-weight:800;transform:rotate(-9deg);text-shadow:0 2px 11px #654d6980;}
+.photo-stage-stamp strong{font-size:20px;letter-spacing:.025em;font-family:Georgia,serif;font-style:italic;font-weight:500;}
+.photo-stage .stage-number,.photo-stage .stage-info,.photo-stage .stage-bottom{z-index:4}
+.photo-stage .stage-motion-toggle{z-index:5}
+@keyframes realBottleRoll{
+  0%{transform:translate3d(-26px,4px,0) rotate(-13deg) scale(.97)}
+  55%{transform:translate3d(3px,-8px,0) rotate(3deg) scale(1)}
+  100%{transform:translate3d(27px,1px,0) rotate(13deg) scale(.99)}
+}
+@keyframes shadowPulse{from{transform:translateX(-8px) scaleX(.85);opacity:.62}to{transform:translateX(10px) scaleX(1.18);opacity:.4}}
+@keyframes floatPhoto{from{transform:translateY(10px) rotate(12deg)}to{transform:translateY(-11px) rotate(5deg)}}
+/* Photographic collection tiles: actual lifestyle stills rather than graphic art. */
+.collection-photo{background-size:cover!important;background-position:center!important;filter:saturate(.88);transition:transform .85s ease,filter .6s ease;}
+.collection-card:hover .collection-photo{transform:scale(1.085) rotate(-1deg);filter:saturate(1.12)}
+.collection-card.collection-one{background:#e4ded7}
+.collection-card.collection-two{background:#dfc9d5}
+.collection-card.collection-three{background:#eadacf}
+/* Real product photos remain intact, with movement only in CSS. */
+.product-card .product-media{overflow:hidden;background:#f1e8ec;}
+.product-card .product-preview img{object-fit:cover;display:block;transform-origin:center center;transition:transform .55s ease,filter .45s ease;}
+.product-card:hover .product-preview img,.product-card:focus-within .product-preview img{filter:saturate(1.08) contrast(1.02);}
+.product-card[data-photo-motion="roll"]:hover .product-preview img,
+.product-card[data-photo-motion="roll"]:focus-within .product-preview img{animation:photoItemRoll 1.35s ease-in-out both;}
+.product-card[data-photo-motion="sway"]:hover .product-preview img,
+.product-card[data-photo-motion="sway"]:focus-within .product-preview img{animation:photoItemSway 1.2s ease-in-out both;}
+.product-card[data-photo-motion="float"]:hover .product-preview img,
+.product-card[data-photo-motion="float"]:focus-within .product-preview img{animation:photoItemFloat 1.1s ease-in-out both;}
+.product-card[data-photo-motion="bounce"]:hover .product-preview img,
+.product-card[data-photo-motion="bounce"]:focus-within .product-preview img{animation:photoItemBounce .9s cubic-bezier(.2,.75,.2,1) both;}
+.product-card[data-photo-motion="lift"]:hover .product-preview img,
+.product-card[data-photo-motion="lift"]:focus-within .product-preview img{animation:photoItemLift 1s ease both;}
+@keyframes photoItemRoll{0%{transform:scale(1.05) translateX(-5px) rotate(-4deg)}55%{transform:scale(1.1) translateX(7px) rotate(6deg)}100%{transform:scale(1.08) translateX(0) rotate(0)}}
+@keyframes photoItemSway{0%{transform:scale(1.03) rotate(-4deg)}45%{transform:scale(1.08) rotate(3deg)}100%{transform:scale(1.06) rotate(0)}}
+@keyframes photoItemFloat{0%{transform:scale(1.04) translateY(5px)}55%{transform:scale(1.09) translateY(-12px)}100%{transform:scale(1.07) translateY(-5px)}}
+@keyframes photoItemBounce{0%{transform:scale(1.04) translateY(0)}38%{transform:scale(1.07) translateY(-13px) rotate(2deg)}68%{transform:scale(1.07) translateY(2px) rotate(-1deg)}100%{transform:scale(1.07) translateY(-4px)}}
+@keyframes photoItemLift{0%{transform:scale(1)}55%{transform:scale(1.08) translateY(-5px)}100%{transform:scale(1.055)}}
+.story-art.story-photo{position:relative;min-height:440px;background:#efe8e1;overflow:hidden;}
+.story-art.story-photo>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s ease;}
+.story-art.story-photo:hover>img{transform:scale(1.065)}
+.story-photo-caption{position:absolute;z-index:2;left:10%;bottom:10%;font-family:'Manrope',sans-serif;color:#fff;font-size:clamp(23px,3vw,43px);font-weight:800;line-height:1.2;text-shadow:0 3px 20px #3d2d4077;}
+.story-photo-caption em{font-family:Georgia,serif;font-weight:400;}
+@media(max-width:760px){
+  .hero-visual.immersive-stage.photo-stage{min-height:410px;height:410px}
+  .rolling-photo{width:59%;height:67%;left:18%;top:15%}
+  .floating-photo{width:31%;height:28%;right:4%;bottom:15%}
+  .photo-stage-stamp{font-size:9px;left:6%;bottom:19%}.photo-stage-stamp strong{font-size:15px}
+  .story-art.story-photo{min-height:290px}
+}
+@media(max-width:420px){.hero-visual.immersive-stage.photo-stage{min-height:370px;height:370px}.floating-photo{right:4%;bottom:17%}.photo-stage-stamp{bottom:21%}}
+@media(prefers-reduced-motion:reduce){
+ .rolling-photo,.floating-photo,.photo-stage-shadow,.product-card .product-preview img{animation:none!important;transition:none!important;}
+ .rolling-photo{transform:rotate(0)}.floating-photo{transform:rotate(6deg)}
+}
+body.motion-paused .rolling-photo,body.motion-paused .floating-photo,body.motion-paused .photo-stage-shadow{animation-play-state:paused!important}
+body.motion-paused .product-card .product-preview img{animation:none!important}

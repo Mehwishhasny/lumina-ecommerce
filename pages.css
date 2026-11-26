@@ -1,0 +1,66 @@
+/* LUMINA · Four-page edition — inherits the existing Maison system. */
+body { background:#fffbf8; }
+body[data-page="home"] main > #shop,
+body[data-page="home"] main > #recentlyViewed,
+body[data-page="home"] main > #story,
+body[data-page="home"] main > #help { display:none !important; }
+body[data-page="about"] main > section:not(.lumina-page-content),
+body[data-page="contact"] main > section:not(.lumina-page-content),
+body[data-page="collection"] main > section:not(.lumina-page-content):not(#shop):not(#recentlyViewed) { display:none !important; }
+body[data-page="collection"] main > #shop { padding-top:40px; }
+body[data-page="collection"] main > #recentlyViewed { padding-bottom:85px; }
+.main-nav a[aria-current="page"] { color:#482d3a; font-weight:800; }
+.main-nav a[aria-current="page"]::after { content:'';height:2px;background:#906674;position:absolute;bottom:-7px;left:2px;right:2px;border-radius:6px; }
+.main-nav a {position:relative;}
+.page-breadcrumb { display:flex;align-items:center;gap:12px;padding-top:33px;padding-bottom:18px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9e8992; }
+.page-breadcrumb a {color:#68525f; text-decoration:none; }
+.page-breadcrumb a:hover {text-decoration:underline;}
+.lumina-page-content { color:#402d36; }
+.lumina-page-content h1,.lumina-page-content h2,.lumina-page-content h3 {font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;}
+.lumina-page-content h1 {font-size:clamp(56px,7vw,104px);line-height:.97;letter-spacing:-.045em;margin:10px 0 25px;}
+.lumina-page-content h2 {font-size:clamp(43px,5vw,76px);line-height:1.04;letter-spacing:-.03em;margin:10px 0 23px;}
+.lumina-page-content h1 em,.lumina-page-content h2 em { color:#9d7381;font-weight:400; }
+.page-kicker {color:#947787!important; font-size:11px!important;font-weight:800!important;letter-spacing:.18em!important;line-height:1.6!important;text-transform:uppercase;margin:0!important;font-family:'Plus Jakarta Sans',sans-serif!important; }
+.lumina-page-content p {line-height:1.8;color:#7d6c72; }
+.page-lede {font-size:17px;max-width:490px; }
+.about-intro {display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:7%;padding-top:20px;padding-bottom:68px;min-height:580px;}
+.about-intro-copy {padding:40px 0 40px 3%;}
+.about-intro-copy .btn {margin-top:20px;}
+.about-intro-photo {height:550px;position:relative;overflow:hidden;border-radius:8px 100px 8px 8px;background:#efe0df;}
+.about-intro-photo img,.about-philosophy-photo img,.contact-intro-image img {width:100%;height:100%;object-fit:cover;transition:transform .9s ease;}
+.about-intro-photo:hover img,.about-philosophy-photo:hover img,.contact-intro-image:hover img {transform:scale(1.04);}
+.about-intro-photo span {position:absolute;bottom:25px;left:26px;background:#fffaf4dd;backdrop-filter:blur(8px);padding:11px 15px;font-size:10px;letter-spacing:.14em;font-weight:800;}
+.about-stats {border-top:1px solid #e4d7d8;border-bottom:1px solid #e4d7d8;display:grid;grid-template-columns:repeat(3,1fr);padding:30px 0;margin-bottom:95px;}
+.about-stats div {display:flex;flex-direction:column;align-items:center;gap:5px;border-right:1px solid #e4d7d8;}.about-stats div:last-child{border-right:0;}
+.about-stats strong{font:500 56px/1 'Cormorant Garamond',serif;color:#593847;}.about-stats span{color:#87747b;font-size:12px;font-weight:600;}
+.about-philosophy {display:grid;grid-template-columns:.96fr 1fr;gap:9%;align-items:center;margin-bottom:105px;}
+.about-philosophy-photo{height:590px;border-radius:140px 7px 7px 7px;overflow:hidden;background:#eee2de;}
+.about-philosophy-copy{padding-right:4%;}.about-philosophy-copy p:not(.page-kicker){max-width:520px;margin-bottom:20px;font-size:15px;}.about-philosophy-copy .text-link{display:inline-flex;margin-top:18px;}
+.about-principles{margin-bottom:100px;}.page-section-heading{text-align:center;margin-bottom:38px;}.about-principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.about-principles article{background:#f9eff0;border:1px solid #f0dfe3;padding:37px 31px;min-height:230px;border-radius:12px;}
+.about-principles article:nth-child(2){background:#f5ebe7;}.about-principles article:nth-child(3){background:#f2eaec;}
+.about-principles article span{font-size:10px;letter-spacing:.13em;color:#967e86;font-weight:800;}
+.about-principles article h3{font-size:36px;line-height:1.1;margin:24px 0 8px;}.about-principles article p{font-size:13px;line-height:1.85;}
+.about-bottom-cta{text-align:center;background:linear-gradient(115deg,#f6e9e7,#f9f2ec);padding:60px 30px 70px;border-radius:16px;margin-bottom:95px;}.about-bottom-cta h2{margin-bottom:32px;}
+.collection-intro {display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;min-height:445px;padding:30px 0 40px;}
+.collection-intro-copy{padding-left:2%;}.collection-intro-copy p:not(.page-kicker){max-width:440px;font-size:16px;}.collection-intro-action{display:flex;align-items:center;gap:25px;margin-top:31px;color:#927b85;font-size:12px;flex-wrap:wrap;}
+.collection-intro-images{height:430px;display:flex;align-items:center;gap:15px;overflow:hidden;}.collection-intro-images img{height:100%;width:50%;min-width:0;object-fit:cover;border-radius:8px;}.collection-intro-images img:nth-child(2){height:78%;align-self:flex-end;border-radius:75px 8px 8px 8px;}
+.collection-prompts {margin-top:23px;padding-bottom:32px;border-bottom:1px solid #eddfe4;}.collection-prompt-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px;}
+.collection-prompt-links a{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border:1px solid #d9bdc7;border-radius:40px;font-size:12px;font-weight:700;color:#664653;text-decoration:none;transition:all .2s;}
+.collection-prompt-links a:hover,.collection-prompt-links a[aria-current="true"]{background:#563747;color:#fff;border-color:#563747;}
+.contact-intro{display:grid;grid-template-columns:1fr .9fr;gap:10%;min-height:360px;align-items:center;padding:25px 0 65px;}.contact-intro p:not(.page-kicker){font-size:16px;max-width:490px;}
+.contact-intro-image{height:355px;border-radius:9px 90px 9px 9px;overflow:hidden;background:#efdfdd;}.contact-grid{display:grid;grid-template-columns:1fr .68fr;gap:8%;margin-bottom:120px;}
+.contact-form-wrap{background:#f9f0ef;border:1px solid #f2e4e6;border-radius:14px;padding:clamp(25px,4vw,54px);}
+.contact-form-wrap h2{font-size:clamp(45px,4.5vw,65px);}.contact-subheading{font-size:13px;margin-top:-4px;margin-bottom:30px;}
+.page-contact-form{display:flex;flex-direction:column;gap:21px;}.page-contact-form label{font-size:12px;font-weight:700;color:#604c59;display:flex;flex-direction:column;gap:9px;}
+.page-contact-form input,.page-contact-form textarea{background:#fffdfc;border:1px solid #dfd0d6;border-radius:9px;padding:15px 17px;color:#4e3946;font:500 14px/1.5 'Plus Jakarta Sans',sans-serif;outline:none;width:100%;}
+.page-contact-form input:focus,.page-contact-form textarea:focus{border-color:#906674;box-shadow:0 0 0 3px #90667425;}
+.page-contact-form button{align-self:flex-start;}.contact-feedback{min-height:24px;font-size:13px;margin:0!important;}.contact-feedback.is-error{color:#a13243!important;}.contact-feedback.is-success{color:#307552!important;}
+.contact-side{display:flex;flex-direction:column;gap:21px;justify-content:flex-start;}.contact-side-card{padding:35px;border:1px solid #e8dadd;border-radius:14px;background:white;}
+.contact-side-symbol{display:grid;place-items:center;width:48px;height:48px;background:#f1e4e7;border-radius:50%;font-size:21px;color:#634052;}
+.contact-side-card h3{font-size:37px;margin:23px 0 8px;}.contact-side-card p{font-size:13px;}.contact-side-card button{background:transparent;border:0;padding:0;cursor:pointer;font:700 13px 'Plus Jakarta Sans',sans-serif;color:#624150;}
+.contact-demo-note{color:#8f7a83;font-size:12px;line-height:1.8;border-left:2px solid #d7bbc6;padding-left:18px;}
+body[data-page="contact"] main > #help{display:block!important;margin-bottom:100px;}
+@media(max-width:900px){.about-intro,.about-philosophy,.collection-intro,.contact-intro,.contact-grid{grid-template-columns:1fr;gap:32px;}.about-intro{padding-top:0;min-height:0;}.about-intro-copy{padding:15px 0;}.about-intro-photo{height:410px;}.about-philosophy-photo{height:440px;order:2;}.about-philosophy-copy{order:1;}.about-principles-grid{grid-template-columns:1fr;gap:12px;}.about-principles article{min-height:0;}.collection-intro-images{height:330px;}.contact-intro-image{height:315px;}.contact-grid{margin-bottom:70px;}}
+@media(max-width:600px){.page-breadcrumb{padding-top:25px;padding-bottom:10px;}.lumina-page-content h1{font-size:clamp(48px,13vw,69px);}.lumina-page-content h2{font-size:clamp(43px,10vw,63px);}.about-intro-photo{height:355px;border-top-right-radius:65px;}.about-intro{padding-bottom:30px;}.about-stats{padding:20px 0;margin-bottom:60px;}.about-stats strong{font-size:37px;}.about-stats span{font-size:10px;text-align:center;}.about-philosophy{margin-bottom:68px;}.about-philosophy-photo{height:330px;}.about-principles{margin-bottom:65px;}.about-bottom-cta{padding:45px 20px 50px;margin-bottom:65px;}.collection-intro{padding:15px 0 20px;}.collection-intro-images{height:235px;gap:8px;}.collection-intro-action{margin-top:17px;}.collection-prompts{margin-top:15px;}.collection-prompt-links{gap:6px;}.collection-prompt-links a{font-size:11px;padding:8px 11px;}.contact-intro{padding:15px 0 35px;}.contact-intro-image{height:260px;}.contact-form-wrap{padding:24px 20px;}.contact-side-card{padding:25px;}}
+@media(prefers-reduced-motion:reduce){.about-intro-photo img,.about-philosophy-photo img,.contact-intro-image img{transition:none;}}
