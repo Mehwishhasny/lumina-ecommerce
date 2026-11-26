@@ -1,21 +1,69 @@
-# LUMINA Maison · Four-Page Website
+# LUMINA Maison — Premium E-commerce Website
 
-A real four-page e-commerce portfolio front end, built on your existing Supabase setup.
+**A modern e-commerce experience combining elegant design, interactive shopping, and AI-powered customer assistance.**
 
-## Pages
-- `index.html` — Home (animated hero, featured items, category teasers, reviews)
-- `about.html` — About LUMINA
-- `collection.html` — Full live Supabase catalog, search, category/price filters, favorites and shopping controls
-- `contact.html` — Contact form (signed-in support requests saved in existing Supabase support_requests table) and FAQs
+LUMINA Maison is a multi-page e-commerce portfolio project built using HTML, CSS, JavaScript, and Supabase. The website features real-time product data, customer accounts, shopping cart functionality, order management, and a live AI shopping assistant.
 
-The top navigation has exactly Home, About, Collection, Contact. **Orders & tracking** and **Manage store** appear in the Account menu (Manage store only for authorized admins). Cart, wishlists, demo checkout, Live AI Concierge, promo popup and order tracking are shared across all pages.
+Designed with a refined luxury aesthetic, LUMINA combines sophisticated typography, product photography, and interactive animations to create an engaging shopping experience across desktop and mobile devices.
 
-## Setup
-1. Back up your current LUMINA site folder.
-2. Extract this ZIP to a NEW folder.
-3. Copy your existing working `config.js` from the old folder into this new folder, overwriting the example config. Do not disclose or place secret/service-role keys there; it must only contain the public URL and publishable key.
-4. Open the folder in VS Code. Right click `index.html` and use **Open with Live Server**. Then visit `about.html`, `collection.html`, or `contact.html` through the navbar.
-5. Sign in via the account icon. Customer order tracking and the admin area are accessed from the profile menu.
-6. Test an order in demo mode and test contact with a signed-in user. If `support_requests` is missing, run your original `full-store-upgrade.sql` migration before using the form.
+## Key Features
 
-**No additional SQL is necessary if your existing LUMINA setup is already complete.** The site is a portfolio demonstration: no money is deducted. Client replies and AI availability depend on your existing Supabase Edge Function and database configuration. Images load from external URLs. Business contact details were intentionally not invented.
+- **Multi-page Website:** Home, About, Collection, and Contact.
+- **Animated Product Showcases:** Interactive product animations and elegant transitions.
+- **Product Catalog:** Database-connected products, search, category filters, and featured collections.
+- **Customer Accounts:** Secure authentication, saved addresses, and wishlist functionality.
+- **Shopping Cart & Checkout:** Cart management, promotional discounts, and simulated payment methods.
+- **Demo Payments:** Card, Cash on Delivery, Google Pay, and Mobile Wallet simulations.
+- **Order Tracking:** Customer order history, delivery progress, and tracking updates.
+- **Admin Dashboard:** Product inventory, order management, delivery updates, and store reports.
+- **AI Shopping Concierge:** Gemini-powered chatbot integrated through Supabase Edge Functions.
+- **Customer Reviews:** Review display and moderated submission functionality.
+- **Promotional Campaigns:** Interactive sale pop-ups and promotional codes.
+- **Responsive Design:** Optimized layouts for mobile, tablet, and desktop.
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| HTML5 | Website structure |
+| CSS3 | Styling, responsive layouts, and animations |
+| JavaScript | Frontend interactions and shopping functionality |
+| Supabase | Backend services and authentication |
+| PostgreSQL | Products, customers, orders, and inventory data |
+| Supabase Edge Functions | Secure server-side chatbot integration |
+| Google Gemini API | AI shopping assistance |
+| Vercel | Website hosting and deployment |
+
+## Website Pages
+
+**Home:** Animated product showcases, featured items, promotional offers, and customer reviews.
+
+**About:** Brand story, shopping philosophy, and design inspiration.
+
+**Collection:** Product listings, filters, search, quick view, and shopping functionality.
+
+**Contact:** Customer assistance, frequently asked questions, and support requests.
+
+Additional customer and administrator features are accessible through the account menu.
+
+## Running Locally
+
+1. Clone or download the repository.
+2. Configure the public Supabase project URL and publishable key in `config.js`.
+3. Open the project in Visual Studio Code.
+4. Launch `index.html` using Live Server.
+5. Configure the Supabase database and Edge Function using the project setup instructions.
+
+Live chatbot functionality requires a separately configured Gemini API key stored securely in Supabase Edge Function secrets.
+
+## Project Information
+
+**Project Type:** Full-stack e-commerce portfolio demonstration
+
+**Payment Status:** All transactions are simulated. No real payments are processed or charged.
+
+**Purpose:** Demonstrating frontend development, database integration, user authentication, administrative workflows, and AI-powered customer assistance.
+
+---
+
+**LUMINA Maison — Modern shopping, thoughtfully designed.**
